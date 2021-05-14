@@ -5,8 +5,6 @@
 docker login --username $DOCKER_HUB_USER --password $DOCKER_HUB_PASS
 
 # Push Dockerfile to DockerHub
-docker-compose build --pull
-docker-compose push
 
 docker build -t mlflow-ts-public .
 docker tag mlflow-ts-public:latest $IMAGE_REPO_URL:latest
